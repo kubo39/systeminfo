@@ -3,9 +3,9 @@ import std.format : format;
 import std.stdio : writefln, writeln;
 
 import systeminfo.cpu;
-import systeminfo.device;
 import systeminfo.disk;
 import systeminfo.memory;
+import systeminfo.product;
 import systeminfo.system;
 
 void main()
@@ -21,6 +21,6 @@ void main()
 
     writeln("カーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
-    writeln("メーカー: ", getVendor());
+    writeln("メーカー: ", getProductVendor());
     writeln("型番: ", getProductName());
 }
