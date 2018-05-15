@@ -9,6 +9,7 @@ enum DiskType
 {
     HDD = 1,
     SSD,
+    Unknown,
 }
 
 DiskType findDiskTypeFromName(string name)
