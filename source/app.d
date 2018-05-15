@@ -14,7 +14,7 @@ void main()
     writeln("CPU情報: ", processorInfo.modelname);
     writefln("CPUコア数: %d", processorInfo.totalCPUs);
     writefln("メモリ容量: %d (kB)", getTotalRAM());
-    writefln("ディスク容量: %s (%s)", getStorageSize("sda"), findDiskTypeFromName("sda"));
+    writefln("ディスク容量: %d GB (%s)", getStorageSize("sda"), findDiskTypeFromName("sda"));
     writeln("カーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
     writeln("メーカー: ", getVendor());

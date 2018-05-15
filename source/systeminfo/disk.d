@@ -17,9 +17,9 @@ DiskType findDiskTypeFromName(string name)
     return cast(DiskType) rotational.to!int;
 }
 
-string getStorageSize(string name)
+ulong getStorageSize(string name)
 {
     auto size = readText(format("/sys/block/%s/size", name)).chop();
     auto gb = size.to!ulong * 512.0 / (1000.0 * 1000.0 * 1000.0);
-    return format("%d GB", gb.to!ulong);
+    return gb.to!ulong;
 }
