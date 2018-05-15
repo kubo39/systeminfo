@@ -3,11 +3,7 @@
 Getting system information for Linux.
 
 ```console
-$ dub run
-Performing "debug" build using /home/kubo39/dlang/dmd-2.080.0/linux/bin64/dmd for x86_64.
-systeminfo ~master: target for configuration "application" is up to date.
-To force a rebuild of up-to-date targets, run again with --force.
-Running ./systeminfo
+$ ./systeminfo
 CPU情報: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
 CPUコア数: 4
 メモリ容量: 8049240 (kB)
