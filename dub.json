@@ -1,0 +1,9 @@
+{
+	"name": "systeminfo",
+	"authors": [
+		"Hiroki Noda"
+	],
+	"description": "Getting system information",
+	"copyright": "Copyright © 2018, Hiroki Noda",
+	"license": "BSL-1.0"
+}

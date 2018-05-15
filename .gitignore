@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+systeminfo.so
+systeminfo.dylib
+systeminfo.dll
+systeminfo.a
+systeminfo.lib
+systeminfo-test-*
+*.exe
+*.o
+*.obj
+*.lst
