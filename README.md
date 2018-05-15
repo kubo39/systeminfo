@@ -1,6 +1,6 @@
 # systeminfo
 
-Getting system information.
+Getting system information for Linux.
 
 ```console
 $ dub run
