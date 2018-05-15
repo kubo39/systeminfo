@@ -15,7 +15,7 @@ void main()
     writefln("CPUコア数: %d", processorInfo.totalCPUs);
     writefln("メモリ容量: %d (kB)", getTotalRAM());
     writefln("ディスク容量: %s (%s)", getStorageSize("sda"), findDiskTypeFromName("sda"));
-    writeln("Linuxカーネル: ", getKernelVersion());
+    writeln("カーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
     writeln("メーカー: ", getVendor());
     writeln("型番: ", getProductName());
