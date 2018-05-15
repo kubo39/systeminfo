@@ -2,6 +2,7 @@ import std.conv : to;
 import std.format : format;
 import std.stdio : writefln, writeln;
 
+import systeminfo.bios;
 import systeminfo.cpu;
 import systeminfo.disk;
 import systeminfo.memory;
@@ -21,6 +22,9 @@ void main()
 
     writeln("カーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
-    writeln("メーカー: ", getProductVendor());
+    writeln("製品メーカー: ", getProductVendor());
     writeln("型番: ", getProductName());
+    writeln("BIOSメーカー: ", getBiosVendor());
+    writeln("BIOSバージョン: ", getBiosVersion());
+    writeln("BIOS製造日: ", getBiosDate());
 }

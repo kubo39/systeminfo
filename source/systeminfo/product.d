@@ -12,3 +12,13 @@ string getProductVendor()
 {
     return readText("/sys/devices/virtual/dmi/id/sys_vendor").chop();
 }
+
+string getProductVersion()
+{
+    return readText("/sys/devices/virtual/dmi/id/product_version").chop();
+}
+
+string getProductSerial()
+{
+    return readText("/sys/devices/virtual/dmi/id/product_serial").chop();
+}
