@@ -1,6 +1,6 @@
 import std.conv : to;
 import std.format : format;
-import std.stdio : writeln;
+import std.stdio : writefln, writeln;
 
 import systeminfo.cpu;
 import systeminfo.device;
@@ -12,9 +12,9 @@ void main()
 {
     auto processorInfo = new ProcessorInfo();
     writeln("CPU情報: ", processorInfo.modelname);
-    writeln("CPUコア数: ", processorInfo.totalCPUs);
-    writeln("メモリ容量: ", getTotalRAM());
-    writeln(format("ディスク容量: %s (%s)", getStorageSize("sda"), findDiskTypeFromName("sda")));
+    writefln("CPUコア数: %d", processorInfo.totalCPUs);
+    writefln("メモリ容量: %d (kB)", getTotalRAM());
+    writefln("ディスク容量: %s (%s)", getStorageSize("sda"), findDiskTypeFromName("sda"));
     writeln("Linuxカーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
     writeln("メーカー: ", getVendor());
