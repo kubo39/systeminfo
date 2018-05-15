@@ -13,8 +13,12 @@ void main()
     auto processorInfo = new ProcessorInfo();
     writeln("CPU情報: ", processorInfo.modelname);
     writefln("CPUコア数: %d", processorInfo.totalCPUs);
+
     writefln("メモリ容量: %d (kB)", getTotalRAM());
-    writefln("ディスク容量: %d GB (%s)", getStorageSize("sda"), findDiskTypeFromName("sda"));
+
+    foreach (blk; getBlocklist())
+        writefln("ディスク容量: %d GB (%s)", getStorageSize(blk), findDiskTypeFromName(blk));
+
     writeln("カーネル: ", getKernelVersion());
     writeln("OS情報: ", getOSInfo());
     writeln("メーカー: ", getVendor());

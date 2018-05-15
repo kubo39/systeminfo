@@ -23,3 +23,17 @@ ulong getStorageSize(string name)
     auto gb = size.to!ulong * 512.0 / (1000.0 * 1000.0 * 1000.0);
     return gb.to!ulong;
 }
+
+string[] getBlocklist()
+{
+    import std.algorithm : filter, map;
+    import std.array : array;
+    import std.file : dirEntries, SpanMode;
+    import std.path : baseName;
+    import std.string : startsWith;
+
+    return dirEntries("/sys/block", SpanMode.shallow, true)
+        .map!(a => a.baseName)
+        .filter!(a => a.startsWith("sd"))
+        .array;
+}
