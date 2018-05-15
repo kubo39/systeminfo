@@ -11,7 +11,7 @@ import systeminfo.system;
 void main()
 {
     auto processorInfo = new ProcessorInfo();
-    writeln("CPU情報: ", processorInfo.modelname);
+    writeln("CPU情報: ", processorInfo.processor);
     writefln("CPUコア数: %d", processorInfo.totalCPUs);
 
     writefln("メモリ容量: %d (kB)", getTotalRAM());
