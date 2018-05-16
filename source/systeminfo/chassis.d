@@ -1,7 +1,7 @@
 module systeminfo.chassis;
 
 import std.file : readText;
-import std.string : chop;
+import std.string : chop, stripRight;
 
 string getChassisType()
 {
@@ -15,14 +15,13 @@ string getChassisVendor()
 
 string getChassisVersion()
 {
-    return readText("/sys/devices/virtual/dmi/id/chassis_version").chop();
+    return readText("/sys/devices/virtual/dmi/id/chassis_version").stripRight();
 }
 
 string getChassisAssetTag()
 {
     return readText("/sys/devices/virtual/dmi/id/chassis_asset_tag").chop();
 }
-
 
 string getChassisSerial()
 {

@@ -1,7 +1,7 @@
 module systeminfo.product;
 
 import std.file : readText;
-import std.string : chop;
+import std.string : chop, stripRight;
 
 string getProductName()
 {
@@ -15,7 +15,7 @@ string getProductVendor()
 
 string getProductVersion()
 {
-    return readText("/sys/devices/virtual/dmi/id/product_version").chop();
+    return readText("/sys/devices/virtual/dmi/id/product_version").stripRight();
 }
 
 string getProductSerial()

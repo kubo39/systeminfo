@@ -1,7 +1,7 @@
 module systeminfo.board;
 
 import std.file : readText;
-import std.string : chop;
+import std.string : chop, stripRight;
 
 string getBoardName()
 {
@@ -15,7 +15,7 @@ string getBoardVendor()
 
 string getBoardVersion()
 {
-    return readText("/sys/devices/virtual/dmi/id/board_version").chop();
+    return readText("/sys/devices/virtual/dmi/id/board_version").stripRight();
 }
 
 string getBoardSerial()
