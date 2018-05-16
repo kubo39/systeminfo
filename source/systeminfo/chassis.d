@@ -22,3 +22,9 @@ string getChassisAssetTag()
 {
     return readText("/sys/devices/virtual/dmi/id/chassis_asset_tag").chop();
 }
+
+
+string getChassisSerial()
+{
+    return readText("/sys/devices/virtual/dmi/id/chassis_serial").chop();
+}

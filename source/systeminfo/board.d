@@ -17,3 +17,13 @@ string getBoardVersion()
 {
     return readText("/sys/devices/virtual/dmi/id/board_version").chop();
 }
+
+string getBoardSerial()
+{
+    return readText("/sys/devices/virtual/dmi/id/board_serial").chop();
+}
+
+string getBoardAssetTag()
+{
+    return readText("/sys/devices/virtual/dmi/id/board_asset_tag").chop();
+}

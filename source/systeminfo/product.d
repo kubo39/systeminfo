@@ -22,3 +22,13 @@ string getProductSerial()
 {
     return readText("/sys/devices/virtual/dmi/id/product_serial").chop();
 }
+
+string getProductFamily()
+{
+    return readText("/sys/devices/virtual/dmi/id/product_family").chop();
+}
+
+string getProductUUID()
+{
+    return readText("/sys/devices/virtual/dmi/id/product_uuid").chop();
+}
