@@ -33,4 +33,8 @@ void main()
     writeln("電源タイプ: ", getChassisType());
     writeln("電源製造メーカー: ", getChassisVendor());
     writeln("電源バージョン: ", getChassisVersion());
+
+    foreach (networkDevice; getNetworkInfo())
+        writefln("ネットワーク: %s (MACアドレス: %s)",
+                 networkDevice.name, networkDevice.macAddress);
 }
