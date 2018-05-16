@@ -29,4 +29,8 @@ void main()
     writeln("ボード: ", getBoardName());
     writeln("ボード製造メーカー: ", getBoardVendor());
     writeln("ボードバージョン: ", getBoardVersion());
+
+    writeln("電源タイプ: ", getChassisType());
+    writeln("電源製造メーカー: ", getChassisVendor());
+    writeln("電源バージョン: ", getChassisVersion());
 }
