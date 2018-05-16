@@ -19,4 +19,7 @@ BIOS製造日: 02/24/2014
 ボード: UX32LN
 ボード製造メーカー: ASUSTeK COMPUTER INC.
 ボードバージョン: 1.0
+電源タイプ: 10
+電源製造メーカー: ASUSTeK COMPUTER INC.
+電源バージョン: 1.0
 ```
