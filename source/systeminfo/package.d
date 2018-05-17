@@ -1,5 +1,6 @@
 module systeminfo;
 
+public import systeminfo.battery;
 public import systeminfo.bios;
 public import systeminfo.board;
 public import systeminfo.chassis;

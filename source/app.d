@@ -34,7 +34,9 @@ void main()
     writeln("電源製造メーカー: ", getChassisVendor());
     writeln("電源バージョン: ", getChassisVersion());
 
-    foreach (networkDevice; getNetworkInfo())
-        writefln("ネットワーク: %s (MACアドレス: %s)",
-                 networkDevice.name, networkDevice.macAddress);
+    if (hasBattery())
+    {
+        writeln("バッテリー: ", getBatteryModelName());
+        writeln("電池の種類: ", getBatteryTechnology());
+    }
 }
