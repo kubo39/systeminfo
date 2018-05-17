@@ -1,7 +1,7 @@
 module systeminfo.disk;
 
 import std.conv : to;
-import std.file : readText;
+import std.file : readText, slurp;
 import std.format : format;
 import std.string : chop;
 
@@ -20,8 +20,8 @@ DiskType findDiskTypeFromName(string name)
 
 ulong getStorageSize(string name)
 {
-    auto size = readText(format("/sys/block/%s/size", name)).chop();
-    auto gb = size.to!ulong * 512.0 / (1000.0 * 1000.0 * 1000.0);
+    auto size = slurp!ulong(format("/sys/block/%s/size", name), "%d")[0];
+    auto gb = size * 512.0 / (1000.0 * 1000.0 * 1000.0);
     return gb.to!ulong;
 }
 
