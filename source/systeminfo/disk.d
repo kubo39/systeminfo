@@ -7,7 +7,7 @@ import std.string : chop;
 
 enum DiskType
 {
-    HDD = 1,
+    HDD,
     SSD,
     Unknown,
 }
