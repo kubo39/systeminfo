@@ -26,7 +26,7 @@ bool hasBattery()
               powerSupply.dirEntries(SpanMode.depth, false)
               .filter!(a => a.isFile)
               .map!(a => a.name)
-              .filter!(a => a.baseName.cmp("type"))
-              .any!(a => a.readText().chop().cmp("Battery"))
+              .filter!(a => a.baseName.cmp("type") == 0)
+              .any!(a => a.readText().chop().cmp("Battery") == 0)
             );
 }
